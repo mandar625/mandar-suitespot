@@ -1,0 +1,51 @@
+<h1>Open Requests</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Unit Number</th>
+      <th>Service Type</th>
+      <th>Summary</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let element of openRequests">
+      <td>{{ element.name }}</td>
+      <td>{{ element.email }}</td>
+      <td>{{ element.unitNumber }}</td>
+      <td>{{ element.serviceType }}</td>
+      <td>{{ element.summary }}</td>
+      <td>
+        <button (click)="onActionClick(element)">
+          Close Request
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h1>Closed Requests</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Unit Number</th>
+      <th>Service Type</th>
+      <th>Summary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let element of closeRequests">
+      <td>{{ element.name }}</td>
+      <td>{{ element.email }}</td>
+      <td>{{ element.unitNumber }}</td>
+      <td>{{ element.serviceType }}</td>
+      <td>{{ element.summary }}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<statistics-component [statsData]="statistics"></statistics-component>
