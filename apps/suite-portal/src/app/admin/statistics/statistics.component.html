@@ -1,0 +1,17 @@
+<h1>Maintenance Requests Stats</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Service Type</th>
+      <th>Total Closed Requests</th>
+      <th>Total Open Requests</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let element of statsData">
+      <td>{{ element.serviceType }}</td>
+      <td>{{ element.closedCount }}</td>
+      <td>{{ element.openCount }}</td>
+    </tr>
+  </tbody>
+</table>

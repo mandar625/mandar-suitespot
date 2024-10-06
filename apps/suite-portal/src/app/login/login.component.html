@@ -1,0 +1,19 @@
+
+<div class="login-card">
+  <h1>Admin Login</h1>
+  <form [formGroup]="loginForm" (ngSubmit)="loginRequest()" class="maint-form">
+    <div class="form-field">
+      <label for="username">Username</label>
+      <input id="username" formControlName="username" type="text" />
+    </div>
+
+    <div class="form-field">
+      <label for="password">Password</label>
+      <input id="password" formControlName="password" type="password" />
+    </div>
+
+    <button [disabled]="!loginForm.valid" type="submit">
+      Submit
+    </button>
+  </form>
+</div>
