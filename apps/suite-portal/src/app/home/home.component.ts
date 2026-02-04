@@ -3,7 +3,6 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { ALL_SERVICE_TYPES } from '@suiteportal/api-interfaces';
 import { MaintenanceRequestService } from '../service/maintainenceRequest.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
-
 @Component({
   selector: 'pm-home',
   templateUrl: './home.component.html',
